@@ -46,7 +46,7 @@ in {
       cp -r $source/* .
       chmod -R +w .
       # This should be in sync with gomod2nix version in flake.lock
-      nix run github:tweag/gomod2nix/67f22dd738d092c6ba88e420350ada0ed4992ae8
+      nix run github:tweag/gomod2nix/40d32f82fc60d66402eb0972e6e368aeab3faf58
 
       nix eval --show-trace --impure --raw --expr "import ${./translate.nix} { \
         dream2nixWithExternals = ${dream2nixWithExternals}; \
